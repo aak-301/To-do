@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo/common/utils/side_drawer.dart';
+import 'package:todo/common/side_drawer.dart';
 
 void main() {
   runApp(const MyApp());
