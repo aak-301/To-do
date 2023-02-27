@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:todo/utils/custom_circular_badge.dart';
-import 'package:todo/utils/side_drawer_elements.dart';
-import 'package:todo/utils/side_drwaer_quarter_circle.dart';
+import 'package:todo/common/utils/custom_circular_badge.dart';
+import 'package:todo/common/utils/side_drawer_elements.dart';
+import 'package:todo/common/utils/side_drwaer_quarter_circle.dart';
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({super.key});
