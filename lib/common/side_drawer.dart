@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:todo/common/custom_circular_badge.dart';
 import 'package:todo/common/side_drawer_elements.dart';
 import 'package:todo/common/side_drwaer_quarter_circle.dart';
+import 'package:todo/constant/routes_table.dart';
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({super.key});
-
-  void printTap() {
-    print("Tapped");
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,15 +62,18 @@ class SideDrawer extends StatelessWidget {
                   children: [
                     SideDrawerElements(
                       sideDrawerText: "Profile",
-                      onTap: printTap,
+                      onTap: () =>
+                          Navigator.of(context).pushNamed(RouteTable.profile),
                     ),
                     SideDrawerElements(
                       sideDrawerText: "Coins",
-                      onTap: printTap,
+                      onTap: () =>
+                          Navigator.of(context).pushNamed(RouteTable.coins),
                     ),
                     SideDrawerElements(
                       sideDrawerText: "Meetings",
-                      onTap: printTap,
+                      onTap: () =>
+                          Navigator.of(context).pushNamed(RouteTable.meetings),
                     ),
                   ],
                 ),
