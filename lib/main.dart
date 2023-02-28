@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:todo/Wallet/coins/coins.dart';
+import 'package:todo/Wallet/meeting/meeting.dart';
+import 'package:todo/Wallet/profile/profile.dart';
 import 'package:todo/common/side_drawer.dart';
+import 'package:todo/constant/routes_table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(),
+      routes: {
+        RouteTable.home: (context) => const MyHomePage(),
+        RouteTable.profile: (context) => const Profile(),
+        RouteTable.coins: (context) => const Coins(),
+        RouteTable.meetings: (context) => const Meetings(),
+      },
     );
   }
 }
