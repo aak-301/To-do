@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/Wallet/coins/coins.dart';
 import 'package:todo/Wallet/meeting/meeting.dart';
 import 'package:todo/Wallet/profile/profile.dart';
-import 'package:todo/common/side_drawer.dart';
+import 'package:todo/wallet/profile/sideDrawer/side_drawer.dart';
 import 'package:todo/constant/routes_table.dart';
 
 void main() {
