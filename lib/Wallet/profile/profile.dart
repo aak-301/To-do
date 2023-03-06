@@ -65,18 +65,16 @@ class Profile extends StatelessWidget {
                         child: Text(
                           "Shreyash Gupta",
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500),
+                              fontSize: 18, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 20,
-                    height: 20,
                     child: Image.asset(
                       "${Constants.IMG_DIR}check_box.png",
-                      width: 20,
-                      height: 10,
+                      width: 27,
+                      height: 27,
                     ),
                   ),
                 ],
@@ -105,18 +103,16 @@ class Profile extends StatelessWidget {
                         child: Text(
                           "7th Jne 2000",
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500),
+                              fontSize: 18, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 20,
-                    height: 20,
                     child: Image.asset(
                       "${Constants.IMG_DIR}lock.png",
-                      width: 20,
-                      height: 10,
+                      width: 27,
+                      height: 27,
                     ),
                   ),
                 ],
@@ -145,18 +141,16 @@ class Profile extends StatelessWidget {
                         child: Text(
                           "shreyashgupta@gmail.com",
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500),
+                              fontSize: 18, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 20,
-                    height: 20,
                     child: Image.asset(
                       "${Constants.IMG_DIR}check_box.png",
-                      width: 20,
-                      height: 10,
+                      width: 27,
+                      height: 27,
                     ),
                   ),
                 ],
@@ -185,18 +179,16 @@ class Profile extends StatelessWidget {
                         child: Text(
                           "9914173314",
                           style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500),
+                              fontSize: 18, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    width: 20,
-                    height: 20,
                     child: Image.asset(
                       "${Constants.IMG_DIR}lock.png",
-                      width: 20,
-                      height: 10,
+                      width: 27,
+                      height: 27,
                     ),
                   ),
                 ],
@@ -218,7 +210,7 @@ class Profile extends StatelessWidget {
                     child: const Center(
                       child: Text(
                         "Save",
-                        style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),
+                        style: TextStyle(fontSize: 22,fontWeight: FontWeight.w600),
                       ),
                     ),
                   ),
