@@ -17,7 +17,7 @@ class Profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               Align(
                 alignment: Alignment.topLeft,
