@@ -57,7 +57,7 @@ class SideDrawer extends StatelessWidget {
               bottom: 70,
               child: SizedBox(
                 height: 320,
-                width: 190,
+                width: MediaQuery.of(context).size.width,
                 child: ListView(
                   children: [
                     SideDrawerElements(
