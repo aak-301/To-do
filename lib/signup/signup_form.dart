@@ -124,6 +124,15 @@ class _SignupFormOtpState extends State<SignupFormOtp> {
             TextFormField(
               cursorHeight: 25,
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                  RouteTable.home,
+                  (route) => false,
+                );
+              },
+              child: const Text("Next"),
+            ),
           ],
         ),
       ),
