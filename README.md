@@ -46,19 +46,5 @@ Well here hard work pays you a joyfull day.
         
    <br />
      
-   ___
   
  
- ## Best Practise to Contribute
- 
- * `Frequent Commits` will help you in writting brief commit messages that are short and also informative.
- * `Semantic Commit Messages` should be made. And it should have an explanation that why you need to update the code in the first place or what has been altered
- * `Creating Branches` will help you add new changes without altering the main branch with any broken codes. While you’re working on a git branch, make sure you run git pull regularly, it will reduce the probability of merge conflicts.
- * `One Branch, One Feature` pattern should be followed. In this pattern we should create a new dedicted branch for any new functionality which we add in our project. And once completed make a pull request and merge changes to main branch.
- * `Don't Commit Dependencies` as this will always increase the size of project repository. Always add these dependencies to .gitignore files.
- * `Never Commit Broken Code` because this could block other developers from their work. Always test your codes before committing.
- * `Use Tags` because tags store the branch's state at that moment. And it will help you to record the project release notes, which are valuable for your team and stakeholders.
- * `Trunk-based Development` is used for getting early feedback because we create a short lived branches for a particular feature and then we merge it in to master. It helps us in avoiding huge git merge conflicts.<br>
- Our project uses this approach. 
- 
-<br>
