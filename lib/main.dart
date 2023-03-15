@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:todo/Wallet/coins/coins.dart';
 import 'package:todo/Wallet/meeting/meeting.dart';
 import 'package:todo/Wallet/profile/profile.dart';
+import 'package:todo/common/helper.dart';
 import 'package:todo/signup/signup_form.dart';
 import 'package:todo/wallet/profile/sideDrawer/side_drawer.dart';
 import 'package:todo/constant/routes_table.dart';
@@ -21,6 +22,7 @@ class InitApp extends StatefulWidget {
 
 class _InitAppState extends State<InitApp> {
   bool isLoading = true;
+  String? deviceId;
 
   @override
   void initState() {
@@ -28,11 +30,11 @@ class _InitAppState extends State<InitApp> {
     super.initState();
   }
 
-  void initApp() {
-    Future.delayed(const Duration(milliseconds: 2000), () {
-      setState(() {
-        isLoading = false;
-      });
+  void initApp() async {
+    deviceId = await Helper.getDeviceId();
+    print(deviceId);
+    setState(() {
+      isLoading = false;
     });
   }
 
