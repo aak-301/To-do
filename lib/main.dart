@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:todo/Wallet/coins/coins.dart';
 import 'package:todo/Wallet/meeting/meeting.dart';
 import 'package:todo/Wallet/profile/profile.dart';
+import 'package:todo/common/app_provider.dart';
 import 'package:todo/common/helper.dart';
 import 'package:todo/signup/signup_form.dart';
 import 'package:todo/wallet/profile/sideDrawer/side_drawer.dart';
@@ -59,8 +61,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Builder(builder: (context) {
-      return MaterialApp(
+    return ChangeNotifierProvider(
+      create: (context) => AppProvider(),
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
@@ -77,8 +80,8 @@ class MyApp extends StatelessWidget {
           RouteTable.coins: (context) => const Coins(),
           RouteTable.meetings: (context) => const Meetings(),
         },
-      );
-    });
+      ),
+    );
   }
 }
 

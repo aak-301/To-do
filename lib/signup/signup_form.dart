@@ -81,15 +81,136 @@ class _SignupFormState extends State<SignupForm> {
       child: Form(
         child: Column(
           children: [
+            const SizedBox(height: 50),
             TextFormField(
-              cursorHeight: 25,
+              validator: (value) {
+                if (value == null) {
+                  return "Enter Your Name";
+                }
+                return null;
+              },
+              cursorHeight: 20,
+              style: const TextStyle(fontSize: 18),
+              decoration: InputDecoration(
+                prefix: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 25, 0),
+                  child: Container(
+                    width: 2,
+                    height: 15,
+                    color: Colors.black26,
+                  ),
+                ),
+                hintText: "Enetr Name",
+                hintStyle: const TextStyle(fontSize: 18),
+                filled: true,
+                fillColor: const Color.fromARGB(174, 234, 217, 169),
+                focusedBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                  ),
+                ),
+                enabledBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                  ),
+                ),
+                errorBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.red,
+                  ),
+                ),
+              ),
             ),
+            const SizedBox(height: 10),
             TextFormField(
-              cursorHeight: 25,
+              validator: (value) {
+                if (value == null) {
+                  return "Enter Your Name";
+                }
+                return null;
+              },
+              cursorHeight: 20,
+              style: const TextStyle(fontSize: 18),
+              decoration: InputDecoration(
+                prefix: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 25, 0),
+                  child: Container(
+                    width: 2,
+                    height: 15,
+                    color: Colors.black26,
+                  ),
+                ),
+                hintText: "Enetr Mobile Number",
+                hintStyle: const TextStyle(fontSize: 18),
+                filled: true,
+                fillColor: const Color.fromARGB(174, 234, 217, 169),
+                focusedBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                  ),
+                ),
+                enabledBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                  ),
+                ),
+                errorBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.red,
+                  ),
+                ),
+              ),
             ),
+            const SizedBox(height: 10),
             TextFormField(
-              cursorHeight: 25,
+              validator: (value) {
+                if (value == null) {
+                  return "Enter Your Name";
+                }
+                return null;
+              },
+              cursorHeight: 20,
+              style: const TextStyle(fontSize: 18),
+              decoration: InputDecoration(
+                prefix: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 25, 0),
+                  child: Container(
+                    width: 2,
+                    height: 15,
+                    color: Colors.black26,
+                  ),
+                ),
+                hintText: "Enetr Email",
+                hintStyle: const TextStyle(fontSize: 18),
+                filled: true,
+                fillColor: const Color.fromARGB(174, 234, 217, 169),
+                focusedBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                  ),
+                ),
+                enabledBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                  ),
+                ),
+                errorBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderSide: BorderSide(
+                    color: Colors.red,
+                  ),
+                ),
+              ),
             ),
+            const SizedBox(height: 10),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(RouteTable.signupOtp);
