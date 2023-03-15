@@ -16,10 +16,17 @@ class SideDrawerElements extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       child: Stack(
         children: [
-          const Image(
-            image: AssetImage("assets/images/cloud.png"),
-            width: 170,
+          Container(
             height: 80,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Color.fromARGB(87, 175, 202, 231),
+                  width: 1.5,
+                ),
+              ),
+            ),
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(33, 10, 0, 0),
@@ -27,7 +34,7 @@ class SideDrawerElements extends StatelessWidget {
               title: Text(
                 sideDrawerText,
                 style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    const TextStyle(fontWeight: FontWeight.w500, fontSize: 25),
               ),
               onTap: (() => onTap()),
             ),
