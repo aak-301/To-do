@@ -178,6 +178,15 @@ class _SignupFormState extends State<SignupForm> {
               cursorHeight: 20,
               style: const TextStyle(fontSize: 18),
               decoration: InputDecoration(
+                suffix: GestureDetector(
+                  child: const Text(
+                    "Send OTP",
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed(RouteTable.signupOtp);
+                  },
+                ),
                 prefix: Padding(
                   padding: const EdgeInsets.fromLTRB(20, 0, 25, 0),
                   child: Container(
@@ -209,13 +218,6 @@ class _SignupFormState extends State<SignupForm> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 10),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(RouteTable.signupOtp);
-              },
-              child: const Text("Next"),
             ),
           ],
         ),
