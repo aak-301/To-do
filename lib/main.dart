@@ -8,6 +8,7 @@ import 'package:todo/Wallet/profile/profile.dart';
 import 'package:todo/common/app_provider.dart';
 import 'package:todo/common/helper.dart';
 import 'package:todo/signup/signup_form.dart';
+import 'package:todo/signup/signup_otp_form.dart';
 import 'package:todo/wallet/profile/sideDrawer/side_drawer.dart';
 import 'package:todo/constant/routes_table.dart';
 
