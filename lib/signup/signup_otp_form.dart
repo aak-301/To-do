@@ -21,6 +21,12 @@ class _SignupFormOtpState extends State<SignupFormOtp> {
   bool _hasError = false;
   String _otpFieldValue = "";
 
+  void _endTimer() {
+    setState(() {
+      _resendOtp = false;
+    });
+  }
+
   void _reSendOtp() {
     if (_otpFieldValue.isEmpty || _otpFieldValue.length != 4) {
       _hasError = true;
@@ -109,7 +115,7 @@ class _SignupFormOtpState extends State<SignupFormOtp> {
                 if (_resendOtp)
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
-                    child: Text("00:${00}"),
+                    child: CountDown(endTimer: _endTimer),
                   ),
               ],
             ),
@@ -136,5 +142,52 @@ class _SignupFormOtpState extends State<SignupFormOtp> {
         ],
       ),
     );
+  }
+}
+
+class CountDown extends StatefulWidget {
+  final Function endTimer;
+  const CountDown({super.key, required this.endTimer});
+
+  @override
+  State<CountDown> createState() => _CountDownState();
+}
+
+class _CountDownState extends State<CountDown> {
+  Timer? timer;
+  Duration duration = const Duration(seconds: 59);
+
+  @override
+  void initState() {
+    super.initState();
+    startTimer();
+  }
+
+  @override
+  void dispose() {
+    timer!.cancel();
+    super.dispose();
+  }
+
+  void decrementCounter() {
+    setState(() {
+      if (duration.inSeconds == 0) {
+        timer!.cancel();
+        widget.endTimer();
+      }
+      duration = Duration(seconds: duration.inSeconds - 1);
+    });
+  }
+
+  void startTimer() {
+    timer = Timer.periodic(
+      const Duration(seconds: 1),
+      (timer) => decrementCounter(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Text("00:${duration.inSeconds}");
   }
 }
