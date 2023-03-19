@@ -8,6 +8,7 @@ import 'package:todo/Wallet/profile/profile.dart';
 import 'package:todo/common/app_provider.dart';
 import 'package:todo/common/helper.dart';
 import 'package:todo/signup/signup_form.dart';
+import 'package:todo/signup/signup_otp_form.dart';
 import 'package:todo/wallet/profile/sideDrawer/side_drawer.dart';
 import 'package:todo/constant/routes_table.dart';
 
@@ -52,7 +53,10 @@ class _InitAppState extends State<InitApp> {
         ),
       );
     }
-    return MyApp();
+    return ChangeNotifierProvider(
+      create: (context) => AppProvider(),
+      child: MyApp(),
+    );
   }
 }
 
@@ -61,26 +65,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => AppProvider(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Color.fromARGB(255, 116, 190, 232),
-            elevation: 0,
-          ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color.fromARGB(255, 116, 190, 232),
+          elevation: 0,
         ),
-        routes: {
-          RouteTable.signup: (context) => const SignupForm(),
-          RouteTable.signupOtp: (context) => const SignupFormOtp(),
-          RouteTable.home: (context) => const MyHomePage(),
-          RouteTable.profile: (context) => const Profile(),
-          RouteTable.coins: (context) => const Coins(),
-          RouteTable.meetings: (context) => const Meetings(),
-        },
       ),
+      routes: {
+        RouteTable.signup: (context) => const SignupForm(),
+        RouteTable.signupOtp: (context) => const SignupFormOtp(),
+        RouteTable.home: (context) => const MyHomePage(),
+        RouteTable.profile: (context) => const Profile(),
+        RouteTable.coins: (context) => const Coins(),
+        RouteTable.meetings: (context) => const Meetings(),
+      },
     );
   }
 }
@@ -90,10 +91,21 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AppProvider provider = Provider.of<AppProvider>(context, listen: false);
+    print("++++++++++++");
+    print(provider.email);
+    print(provider.userName);
+    print(provider.mobileNumber);
+    print("==============");
     return Scaffold(
       drawer: const SideDrawer(),
       appBar: AppBar(
         title: const Text("Todo App"),
+      ),
+      body: Column(
+        children: [
+          // Text(provider.userName ?? ""),
+        ],
       ),
     );
   }
