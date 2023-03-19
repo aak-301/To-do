@@ -8,7 +8,7 @@ class AppProvider extends ChangeNotifier {
   String? _email;
 
   String get userName {
-    return _userName!;
+    return _userName ?? "no data";
   }
 
   set userName(String userName) {
@@ -17,7 +17,7 @@ class AppProvider extends ChangeNotifier {
   }
 
   String get email {
-    return _email!;
+    return _email ?? "no data";
   }
 
   set email(String email) {
@@ -26,7 +26,7 @@ class AppProvider extends ChangeNotifier {
   }
 
   String get mobileNumber {
-    return _mobileNumber!;
+    return _mobileNumber ?? "no data";
   }
 
   set mobileNumber(String mobileNumber) {
